@@ -11,7 +11,7 @@
 | **Author Name** | **NGUYEN MINH HIEU** |
 | **Student ID** | **11230961** |
 | **Course** | BFT65B – Big Data Analytics in Finance (National Economics University) |
-| **GitHub Repository URL** | `[INSERT_PUBLIC_GITHUB_URL_HERE]` *(Public from deadline until grades are released)* |
+| **GitHub Repository URL** | `https://github.com/kamidahieu/nguyen-minh-hieu-bft65b-bank-failure-early-warning.git` *(Public from deadline until grades are released)* |
 | **Data Download Method & Date** | Downloaded on **`2026-11-19`** via the public **FDIC BankFind Suite REST API** (`https://api.fdic.gov/banks`) using a resumable, quarter-partitioned Python ingestion script (`fdic_download_starter.py`) with automated manifest verification (`manifest_financials.json`). |
 | **Raw Table Row Counts** | **`Financials`:** `1,682,738` bank-quarter rows across `170` quarters (`1984Q1–2026Q2`), `24,064` distinct banks (`CERT`), `3` key fields + `30` Call Report financial fields (`0` duplicate `(CERT, REPDTE)` pairs; `0` incomplete quarters).<br>**`Institutions`:** `27,835` rows (`9` structural and exit-classification fields).<br>**`Failures`:** `4,117` historical failure/assistance events (`1934–2026`, `9` fields; `3,275` events on or after `1984-01-01` across `3,240` unique `CERT`s). |
 | **Clean Labeled Modeling Panel ($\le$ 2025Q2)** | **`1,664,114` bank-quarter rows** across `166` quarters (`1984Q1–2025Q2`) after excluding `1,095` post-failure conservatorship filings (`rep_dt >= fail_dt` for outright failures) and `17,529` right-censored observations in `2025Q3–2026Q2`. |

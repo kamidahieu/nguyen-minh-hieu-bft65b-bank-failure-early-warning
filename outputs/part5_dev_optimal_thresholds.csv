@@ -1,0 +1,5 @@
+model,threshold,total_cost_m_usd,no_model_cost_m_usd,cost_reduction_pct,precision,recall,f1_score,alert_rate_pct,tp,fp,fn,tn
+Logistic Regression (L2 Calibrated),0.046,1127.099,3148.341,64.2,0.2414,0.7617,0.3666,2.281,4997,15707,1563,885306
+Logistic Regression (Class-Balanced),0.55,1043.842,3148.341,66.84,0.2203,0.8122,0.3466,2.665,5328,18857,1232,882156
+"Random Forest (100 trees, depth=10)",0.044,768.014,3148.341,75.61,0.272,0.8729,0.4148,2.319,5726,15323,834,885690
+HistGradientBoosting (GBM),0.018,825.446,3148.341,73.78,0.2427,0.8742,0.3799,2.604,5735,17896,825,883117

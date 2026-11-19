@@ -1,0 +1,17 @@
+fold,fold_name,train_rows,train_pos,val_rows,val_pos,model,pr_auc,roc_auc,brier_score,recall_top_1pct,recall_top_2pct,recall_top_5pct,fit_time_s
+1,Fold 1 (Val 1988-1989: Early S&L Crisis),215967,2270,132384,3902,Logistic Regression (L2 Calibrated),0.6023,0.9623,0.01937,0.2655,0.4618,0.7647,2.47
+1,Fold 1 (Val 1988-1989: Early S&L Crisis),215967,2270,132384,3902,Logistic Regression (Class-Balanced),0.5655,0.9531,0.04097,0.2609,0.4413,0.7125,3.7
+1,Fold 1 (Val 1988-1989: Early S&L Crisis),215967,2270,132384,3902,"Random Forest (100 trees, depth=10)",0.6503,0.9776,0.01854,0.2624,0.4931,0.8106,8.47
+1,Fold 1 (Val 1988-1989: Early S&L Crisis),215967,2270,132384,3902,HistGradientBoosting (GBM),0.6213,0.9758,0.01892,0.2414,0.4605,0.808,6.12
+2,Fold 2 (Val 1990-1991: Peak S&L / FIRREA),354036,6012,122435,1951,Logistic Regression (L2 Calibrated),0.3263,0.9758,0.01765,0.2019,0.4941,0.8862,4.07
+2,Fold 2 (Val 1990-1991: Peak S&L / FIRREA),354036,6012,122435,1951,Logistic Regression (Class-Balanced),0.3156,0.9748,0.07615,0.203,0.4803,0.8606,5.64
+2,Fold 2 (Val 1990-1991: Peak S&L / FIRREA),354036,6012,122435,1951,"Random Forest (100 trees, depth=10)",0.4469,0.98,0.01092,0.3424,0.5264,0.8826,12.85
+2,Fold 2 (Val 1990-1991: Peak S&L / FIRREA),354036,6012,122435,1951,HistGradientBoosting (GBM),0.3832,0.9763,0.01267,0.2737,0.5049,0.8483,9.42
+3,Fold 3 (Val 1992-1994: Post-FIRREA Resolution),481235,8757,163381,517,Logistic Regression (L2 Calibrated),0.2019,0.9763,0.00325,0.6518,0.7988,0.9168,5.51
+3,Fold 3 (Val 1992-1994: Post-FIRREA Resolution),481235,8757,163381,517,Logistic Regression (Class-Balanced),0.1671,0.9766,0.01251,0.6518,0.8046,0.9284,8.88
+3,Fold 3 (Val 1992-1994: Post-FIRREA Resolution),481235,8757,163381,517,"Random Forest (100 trees, depth=10)",0.305,0.984,0.00286,0.7099,0.8066,0.9207,19.91
+3,Fold 3 (Val 1992-1994: Post-FIRREA Resolution),481235,8757,163381,517,HistGradientBoosting (GBM),0.3233,0.9866,0.00275,0.7137,0.8259,0.9458,12.44
+4,Fold 4 (Val 1995-2006: Great Moderation),652662,10015,489373,190,Logistic Regression (L2 Calibrated),0.1487,0.8874,0.00036,0.6474,0.6737,0.7316,7.72
+4,Fold 4 (Val 1995-2006: Great Moderation),652662,10015,489373,190,Logistic Regression (Class-Balanced),0.0641,0.9017,0.00542,0.6368,0.7053,0.7526,11.82
+4,Fold 4 (Val 1995-2006: Great Moderation),652662,10015,489373,190,"Random Forest (100 trees, depth=10)",0.1682,0.9289,0.00036,0.6632,0.7211,0.7474,27.79
+4,Fold 4 (Val 1995-2006: Great Moderation),652662,10015,489373,190,HistGradientBoosting (GBM),0.1569,0.9365,0.00037,0.6579,0.7211,0.7895,17.22

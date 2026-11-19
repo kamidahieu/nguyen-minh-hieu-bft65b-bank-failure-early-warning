@@ -1,0 +1,2 @@
+dev_failures_total,dev_failures_with_cost,dev_median_dif_cost_k,dev_mean_dif_cost_k,dev_median_qbfasset_k,dev_median_cost_to_asset_pct,avoidable_loss_fraction_alpha,c_fn_per_bank_quarter_k,c_fp_per_bank_quarter_k,cost_ratio_fn_to_fp,theoretical_bayes_threshold
+2710,2620,9598.56,68534.83,53254.5,20.69,0.2,479.93,24.0,20.0,0.0476

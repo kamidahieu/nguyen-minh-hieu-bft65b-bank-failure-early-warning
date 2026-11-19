@@ -1,0 +1,40 @@
+feature,camels_pillar,formula,description,dev_missing_pct,test_missing_pct,dev_mean_healthy_y0,dev_mean_failing_y1,dev_univariate_auc,risk_direction,dev_clip_p005,dev_clip_p995,dev_imputed_median,dev_scaler_mean,dev_scaler_std
+eq_to_asset,C - Capital,EQ / ASSET * 100,Book equity-to-assets ratio (%),0.24,0.27,10.1357,-3.0552,0.951,-,-4.9552,84.9127,8.6863,10.0658,8.1997
+tier1_lev_ratio,C - Capital,RBC1AAJ_win,Tier 1 leverage capital ratio (%),6.24,0.0,10.4896,1.6716,0.9481,-,0.0,90.5337,8.7374,10.3083,8.5282
+tier1_rbc_ratio,C - Capital,RBCRWAJ_win,Tier 1 risk-based capital ratio (%),35.01,8.13,21.2996,2.7375,0.9576,-,0.0,273.0199,15.3626,18.7644,20.2362
+eq_plus_res_to_asset,C - Capital,(EQ + LNATRES) / ASSET * 100,Total loss-absorbing capital + reserves to assets (%),0.24,0.27,10.9512,-0.1878,0.9261,-,-3.3282,85.0116,9.5118,10.8816,8.152
+texas_ratio,C - Capital,(NCLNLS + ORE) / (EQ + LNATRES) * 100,Supervisory Texas Ratio: nonperforming assets to equity + reserves (%),0.24,0.27,22.5434,329.473,0.9602,+,0.0,500.0,7.7878,25.1439,66.9929
+eq_to_asset_chg_1q,C - Capital,"eq_to_asset - lag(eq_to_asset, 1)",1-quarter change in equity-to-assets ratio (pp),2.21,0.33,-0.1207,-1.9858,0.768,-,-10.5841,4.5666,0.0341,-0.1093,1.2242
+eq_to_asset_chg_4q,C - Capital,"eq_to_asset - lag(eq_to_asset, 4)",4-quarter (YoY) change in equity-to-assets ratio (pp),8.0,0.56,-0.206,-5.6772,0.8672,-,-21.911,8.2818,0.082,-0.1932,2.427
+npl_to_loans,A - Asset Quality,NCLNLS / LNLSGR * 100,Noncurrent loans to gross loans (%),1.12,1.66,1.8858,12.2612,0.9059,+,0.0,19.6953,0.9955,1.8962,2.7193
+npa_to_asset,A - Asset Quality,(NCLNLS + ORE) / ASSET * 100,Nonperforming assets (noncurrent loans + OREO) to assets (%),0.0,0.0,1.5138,13.298,0.934,+,0.0,18.7109,0.7644,1.5497,2.4245
+naasset_to_asset,A - Asset Quality,NAASSET / ASSET * 100,Nonaccrual assets to total assets (%),6.44,0.0,0.641,4.8395,0.8874,+,0.0,7.7965,0.2511,0.6176,1.0537
+p9asset_to_asset,A - Asset Quality,P9ASSET / ASSET * 100,Assets past due >=90 days to total assets (%),6.44,0.0,0.3403,1.8361,0.7296,+,0.0,4.2857,0.0953,0.3226,0.5945
+p3asset_to_asset,A - Asset Quality,P3ASSET / ASSET * 100,Assets past due 30-89 days to total assets (%),81.33,0.0,0.8129,2.3483,0.6903,+,0.0,5.0694,0.5435,0.5921,0.3862
+ore_to_asset,A - Asset Quality,ORE / ASSET * 100,Other Real Estate Owned (foreclosed property) to total assets (%),0.26,0.28,0.4457,5.267,0.8862,+,0.0,8.7194,0.061,0.4506,1.0776
+reserve_to_loans,A - Asset Quality,LNATRES / LNLSGR * 100,Loan loss allowance to gross loans (%),1.14,1.93,1.495,4.3339,0.7385,+,0.0,8.6722,1.2405,1.4771,1.1354
+reserve_coverage,A - Asset Quality,LNATRES / (NCLNLS + 1) * 100,Loan loss reserve coverage of noncurrent loans (%),0.43,0.27,198.0201,51.9895,0.7871,-,0.0,500.0,118.2573,196.4265,180.6038
+net_chargeoffs_to_loans,A - Asset Quality,NTLNLS / LNLSGR * 100,Net loan charge-offs to gross loans (%),7.4,1.93,0.4229,3.0792,0.8014,+,-0.7297,6.3417,0.0527,0.2816,0.7626
+provision_to_asset,A - Asset Quality,ELNATR / ASSET * 100,Loan loss provision expense to total assets (%),3.48,0.27,-0.8279,2.5162,0.7574,+,-0.2574,4.3392,0.0752,0.2191,0.5029
+npa_to_asset_chg_4q,A - Asset Quality,"npa_to_asset - lag(npa_to_asset, 4)",4-quarter change in nonperforming assets to total assets (pp),7.78,0.29,0.0329,3.9173,0.7207,+,-4.8644,8.2226,-0.008,0.0455,1.2473
+cost_to_income,M - Management,NONIX / (INTINC - EINTEXP + NONII) * 100,Efficiency / cost-to-income overhead ratio (%),0.26,0.29,71.5006,164.6428,0.9047,+,27.396,300.0,65.8571,72.3227,34.8708
+nonix_to_asset,M - Management,NONIX / ASSET * 100,Non-interest operating expense to total assets (%),0.26,0.29,2.8827,3.0648,0.6216,+,0.2977,25.9759,1.7389,2.1328,2.3069
+re_loan_share,M - Management,LNRE / LNLSGR * 100,Real estate loan share of gross loans (%),0.91,1.66,57.894,64.4858,0.5658,+,0.0,107.7961,57.0083,57.8811,25.3875
+ci_loan_share,M - Management,LNCI / LNLSGR * 100,Commercial & industrial (C&I) loan share of gross loans (%),0.91,1.66,16.0459,16.7517,0.5256,-,0.0,70.9751,13.4236,15.9655,13.457
+con_loan_share,M - Management,LNCON / LNLSGR * 100,Consumer loan share of gross loans (%),1.12,1.93,15.7354,13.8302,0.5564,-,0.0,92.6924,12.224,15.6453,13.9777
+asset_growth_4q,M - Management,"(ASSET - lag(ASSET, 4)) / lag(ASSET, 4) * 100",4-quarter (YoY) total asset growth rate (%),7.78,0.29,15.7271,-4.8889,0.8012,-,-29.4333,217.5299,5.6451,10.0462,23.6959
+roa,E - Earnings,ROA_win,Return on Assets (%),0.0,0.0,0.8881,-4.4703,0.929,-,-9.1803,6.189,1.0125,0.8284,1.4283
+roe,E - Earnings,ROE_win,Return on Equity (%),1.22,0.3,9.4215,-151.9076,0.8917,-,-142.81,56.3721,11.26,9.208,17.703
+nim,E - Earnings,NIMY_win,Net Interest Margin (%),0.0,0.0,4.238,2.111,0.7723,-,-0.1306,9.4806,4.2464,4.2157,1.2938
+nonii_to_asset,E - Earnings,NONII / ASSET * 100,Non-interest income to total assets (%),0.26,0.27,1.1996,0.6298,0.5693,+,0.0,26.4197,0.3426,0.6815,2.1638
+roa_chg_4q,E - Earnings,"ROA_win - lag(ROA_win, 4)",4-quarter (YoY) change in ROA (pp),7.78,0.29,0.0399,-2.7205,0.7253,-,-6.8461,6.4538,0.0081,0.0169,1.0987
+roa_roll4_mean,E - Earnings,"rolling_mean(ROA_win, 4)",4-quarter trailing mean of ROA (%),5.88,0.2,0.9346,-3.3106,0.9435,-,-6.6383,5.6423,1.0152,0.8874,1.1339
+roa_roll4_std,E - Earnings,"rolling_std(ROA_win, 4, ddof=1)",4-quarter trailing volatility (std dev) of ROA (%),5.88,0.2,0.3404,2.2894,0.9046,+,0.0076,5.132,0.1553,0.3322,0.5968
+liquid_to_asset,L - Liquidity,(CHBAL + SC) / ASSET * 100,Cash & investment securities to total assets (%),0.0,0.0,33.4222,21.7605,0.7201,-,2.1706,84.8101,31.5935,33.2907,16.2056
+loan_to_dep,L - Liquidity,LNLSGR / DEP * 100,Gross loans to total deposits ratio (%),0.62,0.97,296.7072,69.6751,0.5181,+,5.5413,208.947,68.8736,69.0642,23.6758
+dep_to_asset,L - Liquidity,DEP / ASSET * 100,Total deposits to total assets (%),0.0,0.0,84.7896,94.7474,0.7759,+,0.0,99.4794,88.036,84.8108,12.3101
+brokered_dep_share,L - Liquidity,BRO / DEP * 100,Brokered deposits share of total deposits (%),1.9,1.23,0.9748,3.6466,0.6181,+,0.0,36.1453,0.0,0.8418,3.8876
+funding_cost_to_dep,L - Liquidity,EINTEXP / DEP * 100,Interest expense to total deposits (%),1.04,1.24,14.7252,4.8137,0.708,+,0.2241,11.1716,2.5945,2.9951,1.9585
+log_asset,S - Size & Flags,ln(ASSET),Natural log of total assets ($ thousands),0.0,0.0,11.1859,11.2165,0.5011,-,8.0426,16.2763,11.0371,11.184,1.3618
+flag_negative_equity,S - Size & Flags,1{EQ < 0},Binary indicator for negative book equity,0.0,0.0,0.0084,0.4169,0.7043,+,0.0,1.0,0.0,0.0119,0.1084
+flag_rbcrwaj_struct_zero,S - Size & Flags,1{RBCRWAJ == 0 & EQ != 0},Binary indicator for structural missing risk-weighted capital (Pre-Basel I / CBLR),0.0,0.0,0.3468,0.7412,0.6972,+,0.0,1.0,0.0,0.3502,0.477

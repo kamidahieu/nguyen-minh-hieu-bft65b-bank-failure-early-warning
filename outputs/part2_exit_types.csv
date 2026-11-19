@@ -1,0 +1,5 @@
+exit_category,distinct_banks,total_bank_quarters,avg_quarters_reported
+Merger / Voluntary Exit (CHANGEC1 non-failure),16345,905689,55.4
+Active at end of sample (2026Q2),4309,671096,155.7
+Failed / Assisted (in failures.parquet >=1984),3218,98917,30.7
+Historical Pre-FIRREA Thrift / Unmatched Exit,192,7036,36.6

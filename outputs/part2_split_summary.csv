@@ -1,0 +1,5 @@
+split,start_repdte,end_repdte,n_quarters,bank_quarters,distinct_banks,positive_labels_y1,positive_rate_pct,distinct_failing_certs
+dev,19840331,20061231,92,1193914,23624,10251,0.8586,2658
+embargo,20070331,20071231,4,34754,8892,53,0.1525,32
+test,20080331,20250630,70,435446,8798,2181,0.5009,558
+right_censored,20250930,20260630,4,17529,4461,11,0.0628,4

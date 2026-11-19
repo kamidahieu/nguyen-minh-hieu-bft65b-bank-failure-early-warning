@@ -1,0 +1,24 @@
+=== POLARS UNOPTIMIZED LOGICAL PLAN ===
+ WITH_COLUMNS:
+ [(((col("ASSET") - col("ASSET").shift([dyn int: 1]).over([col("CERT"), col("spell_id")])) / col("ASSET").shift([dyn int: 1]).over([col("CERT"), col("spell_id")])) * 100.0).alias("asset_growth_1q"), (((col("ASSET") - col("ASSET").shift([dyn int: 4]).over([col("CERT"), col("spell_id")])) / col("ASSET").shift([dyn int: 4]).over([col("CERT"), col("spell_id")])) * 100.0).alias("asset_growth_4q"), (col("eq_to_asset") - col("eq_to_asset").shift([dyn int: 4]).over([col("CERT"), col("spell_id")])).alias("eq_to_asset_chg_4q"), (col("ROA_win") - col("ROA_win").shift([dyn int: 4]).over([col("CERT"), col("spell_id")])).alias("roa_chg_4q"), (col("npl_to_loans") - col("npl_to_loans").shift([dyn int: 4]).over([col("CERT"), col("spell_id")])).alias("npl_to_loans_chg_4q"), col("ROA_win").rolling_mean().over([col("CERT"), col("spell_id")]).alias("roa_roll4_mean"), col("ROA_win").rolling_std().over([col("CERT"), col("spell_id")]).alias("roa_roll4_std"), col("NIMY_win").rolling_mean().over([col("CERT"), col("spell_id")]).alias("nim_roll4_mean"), col("NIMY_win").rolling_std().over([col("CERT"), col("spell_id")]).alias("nim_roll4_std"), (col("ROA_win") - col("ROA_win").mean().over([col("REPDTE")])).alias("roa_rel_quarter")] 
+   WITH_COLUMNS:
+   [((col("EQ") / col("ASSET")) * 100.0).alias("eq_to_asset"), when(col("LNLSGR") > 0.0).then((col("NCLNLS") / col("LNLSGR")) * 100.0).otherwise(null.cast(Float64)).alias("npl_to_loans"), when(col("LNLSGR") > 0.0).then((col("LNATRES") / col("LNLSGR")) * 100.0).otherwise(null.cast(Float64)).alias("reserve_to_loans"), when(col("DEP") > 0.0).then((col("LNLSGR") / col("DEP")) * 100.0).otherwise(null.cast(Float64)).alias("loan_to_dep"), (((col("CHBAL") + col("SC")) / col("ASSET")) * 100.0).alias("liquid_to_asset"), ((col("ORE") / col("ASSET")) * 100.0).alias("ore_to_asset")] 
+    SORT BY [col("CERT"), col("spell_id"), col("q_idx")]
+      SELECT [col("CERT"), col("REPDTE"), col("q_idx"), col("spell_id"), col("ASSET"), col("DEP"), col("EQ"), col("CHBAL"), col("SC"), col("LNLSGR"), col("LNATRES"), col("NCLNLS"), col("ORE"), col("ROA_win"), col("NIMY_win")]
+        Parquet SCAN [C:/Users/Minh Hieu/Desktop/Final Exam - Financial Big data analytics/data_clean/panel_labeled.parquet]
+        PROJECT */57 COLUMNS
+        ESTIMATED ROWS: 1664114
+
+=== POLARS OPTIMIZED PHYSICAL PLAN ===
+simple π 31/31 ["CERT", "REPDTE", "q_idx", ... 28 other columns]
+   WITH_COLUMNS:
+   [(col("eq_to_asset") - col("eq_to_asset").shift([dyn int: 4]).over([col("CERT"), col("spell_id")])).alias("eq_to_asset_chg_4q"), (col("npl_to_loans") - col("npl_to_loans").shift([dyn int: 4]).over([col("CERT"), col("spell_id")])).alias("npl_to_loans_chg_4q")] 
+    simple π 29/29 ["CERT", "REPDTE", "q_idx", ... 26 other columns]
+       WITH_COLUMNS:
+       [((col("EQ") / col("ASSET")) * 100.0).alias("eq_to_asset"), when(col("__POLARS_CSER_0x100000008")).then((col("NCLNLS") / col("LNLSGR")) * 100.0).otherwise(null.cast(Float64)).alias("npl_to_loans"), when(col("__POLARS_CSER_0x100000008")).then((col("LNATRES") / col("LNLSGR")) * 100.0).otherwise(null.cast(Float64)).alias("reserve_to_loans"), when(col("DEP") > 0.0).then((col("LNLSGR") / col("DEP")) * 100.0).otherwise(null.cast(Float64)).alias("loan_to_dep"), (((col("CHBAL") + col("SC")) / col("ASSET")) * 100.0).alias("liquid_to_asset"), ((col("ORE") / col("ASSET")) * 100.0).alias("ore_to_asset"), (((col("ASSET") - col("ASSET").shift([dyn int: 1]).over([col("CERT"), col("spell_id")])) / col("ASSET").shift([dyn int: 1]).over([col("CERT"), col("spell_id")])) * 100.0).alias("asset_growth_1q"), (((col("ASSET") - col("ASSET").shift([dyn int: 4]).over([col("CERT"), col("spell_id")])) / col("ASSET").shift([dyn int: 4]).over([col("CERT"), col("spell_id")])) * 100.0).alias("asset_growth_4q"), (col("ROA_win") - col("ROA_win").shift([dyn int: 4]).over([col("CERT"), col("spell_id")])).alias("roa_chg_4q"), col("ROA_win").rolling_mean().over([col("CERT"), col("spell_id")]).alias("roa_roll4_mean"), col("ROA_win").rolling_std().over([col("CERT"), col("spell_id")]).alias("roa_roll4_std"), col("NIMY_win").rolling_mean().over([col("CERT"), col("spell_id")]).alias("nim_roll4_mean"), col("NIMY_win").rolling_std().over([col("CERT"), col("spell_id")]).alias("nim_roll4_std"), (col("ROA_win") - col("ROA_win").mean().over([col("REPDTE")])).alias("roa_rel_quarter")] 
+         WITH_COLUMNS:
+         [(col("LNLSGR") > 0.0).alias("__POLARS_CSER_0x100000008")] 
+          SORT BY [col("CERT"), col("spell_id"), col("q_idx")]
+            Parquet SCAN [C:/Users/Minh Hieu/Desktop/Final Exam - Financial Big data analytics/data_clean/panel_labeled.parquet]
+            PROJECT 15/57 COLUMNS
+            ESTIMATED ROWS: 1664114

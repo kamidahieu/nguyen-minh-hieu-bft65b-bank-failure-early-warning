@@ -1,0 +1,5 @@
+format,engine,disk_mb,compression_ratio_vs_csv,full_scan_s,filtered_query_s,speedup_filtered_vs_pandas_csv,total_rows,filtered_rows
+Partitioned Parquet (Snappy),Polars,236.76,1.78,0.1395,0.0908,10.13,1682738,452975
+Partitioned Parquet (Snappy),PyArrow Dataset,236.76,1.78,0.2807,0.1348,6.82,1682738,452975
+Raw CSV (uncompressed),Polars,422.52,1.0,0.4062,0.2068,4.45,1682738,452975
+Raw CSV (uncompressed),pandas,422.52,1.0,3.0096,0.9201,1.0,1682738,452975

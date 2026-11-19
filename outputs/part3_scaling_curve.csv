@@ -1,0 +1,16 @@
+scale_factor,rows,engine,wall_time_s
+0.25,522516,Polars Lazy (Parallel),0.0861
+0.25,522516,pandas Baseline,2.8067
+0.25,522516,PySpark (local[*]),1.2495
+0.5,1001948,Polars Lazy (Parallel),0.2071
+0.5,1001948,pandas Baseline,4.2956
+0.5,1001948,PySpark (local[*]),1.5978
+1.0,1664114,Polars Lazy (Parallel),0.2808
+1.0,1664114,pandas Baseline,8.5194
+1.0,1664114,PySpark (local[*]),2.2266
+2.0,3328228,Polars Lazy (Parallel),0.5399
+2.0,3328228,pandas Baseline,17.1971
+2.0,3328228,PySpark (local[*]),3.9715
+4.0,6656456,Polars Lazy (Parallel),1.067
+4.0,6656456,pandas Baseline,37.5468
+4.0,6656456,PySpark (local[*]),11.2243

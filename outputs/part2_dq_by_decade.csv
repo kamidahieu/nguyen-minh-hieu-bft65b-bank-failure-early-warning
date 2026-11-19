@@ -1,0 +1,6 @@
+decade,rows,distinct_banks,rbcrwaj_struct_zero_pct,rbc1aaj_struct_zero_pct,p3asset_null_pct,p9asset_null_pct,naasset_null_pct,ntlnls_null_pct,elnatr_null_pct,bro_null_pct,roe_null_pct
+1980s,419535,20478,100.0,17.97,100.0,18.53,18.53,18.25,9.49,3.19,2.97
+1990s,511881,17892,0.02,0.01,100.0,0.0,0.0,0.29,0.29,0.29,0.81
+2000s,365266,11671,0.0,0.0,11.12,0.0,0.0,0.22,0.22,0.22,0.22
+2010s,262595,8072,0.0,0.0,0.0,0.0,0.0,0.26,0.26,0.26,0.27
+2020s,123461,5250,36.92,0.0,0.0,0.0,0.0,0.36,0.36,0.36,0.47

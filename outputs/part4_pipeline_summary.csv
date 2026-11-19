@@ -1,0 +1,3 @@
+matrix,rows,raw_features,transformed_columns_with_indicators,nan_count_after_pipeline,inf_count_after_pipeline
+X_dev_transformed (1984Q1-2006Q4),1193914,39,71,0,0
+X_test_transformed (2008Q1-2025Q2),435446,39,71,0,0

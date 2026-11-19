@@ -1,0 +1,9 @@
+check,count
+Total raw bank-quarter rows,1682738
+Distinct banks (CERT),24064
+Discontinuous reporting gaps (q_step > 1 quarter),33
+Distinct banks with reporting gaps,32
+Rows with EQ < 0 (technical book insolvency),15647
+Rows with DEPDOM > DEP,0
+Rows with LNLSNET > LNLSGR,16
+Rows with impossible negative stocks/flows (any column),989

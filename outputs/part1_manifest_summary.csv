@@ -1,0 +1,2 @@
+quarters_in_manifest,parquet_files_on_disk,first_quarter,last_quarter,incomplete_quarters,api_total_mismatches,manifest_total_rows,parquet_total_rows,distinct_banks_cert,duplicate_cert_repdte,institutions_rows,failures_rows,num_columns,compression
+170,170,19840331,20260630,0,0,1682738,1682738,24064,0,27835,4117,33,SNAPPY

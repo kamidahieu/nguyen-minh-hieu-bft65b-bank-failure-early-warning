@@ -1,0 +1,13 @@
+subperiod,model,bank_quarters,positive_y1,pr_auc,roc_auc,recall_top_1pct,recall_top_5pct,recall_at_dev_tau,precision_at_dev_tau
+GFC & Aftermath (2008Q1-2014Q4),Logistic Regression (L2 Calibrated),212645,2052,0.6345,0.9808,0.6116,0.9186,0.557,0.6396
+Post-GFC Calm (2015Q1-2022Q4),Logistic Regression (L2 Calibrated),176574,107,0.3855,0.9379,0.785,0.8224,0.4206,0.3383
+2023 Regional Bank Crisis (2023Q1-2025Q2),Logistic Regression (L2 Calibrated),46227,22,0.1901,0.8847,0.4545,0.6364,0.1818,0.8
+GFC & Aftermath (2008Q1-2014Q4),Logistic Regression (Class-Balanced),212645,2052,0.5868,0.9817,0.5945,0.9181,0.845,0.2922
+Post-GFC Calm (2015Q1-2022Q4),Logistic Regression (Class-Balanced),176574,107,0.1851,0.9173,0.7757,0.8131,0.6262,0.1573
+2023 Regional Bank Crisis (2023Q1-2025Q2),Logistic Regression (Class-Balanced),46227,22,0.0593,0.9077,0.3182,0.5455,0.1818,0.0342
+GFC & Aftermath (2008Q1-2014Q4),"Random Forest (100 trees, depth=10)",212645,2052,0.641,0.9777,0.6223,0.9079,0.8426,0.3043
+Post-GFC Calm (2015Q1-2022Q4),"Random Forest (100 trees, depth=10)",176574,107,0.3735,0.9179,0.785,0.8037,0.7196,0.1126
+2023 Regional Bank Crisis (2023Q1-2025Q2),"Random Forest (100 trees, depth=10)",46227,22,0.0604,0.844,0.4091,0.4545,0.3182,0.0229
+GFC & Aftermath (2008Q1-2014Q4),HistGradientBoosting (GBM),212645,2052,0.6466,0.9823,0.6291,0.9206,0.8587,0.3065
+Post-GFC Calm (2015Q1-2022Q4),HistGradientBoosting (GBM),176574,107,0.3216,0.9221,0.7944,0.8037,0.729,0.1625
+2023 Regional Bank Crisis (2023Q1-2025Q2),HistGradientBoosting (GBM),46227,22,0.0762,0.9101,0.4545,0.5909,0.3182,0.0387

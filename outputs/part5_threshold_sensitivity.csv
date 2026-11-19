@@ -1,0 +1,5 @@
+model,cost_ratio_fn_to_fp,theoretical_bayes_tau,empirical_optimal_tau_dev,dev_oof_recall,dev_oof_precision,dev_oof_alert_rate_pct,dev_cost_reduction_pct
+HistGradientBoosting (GBM),10.0,0.0909,0.036,0.8178,0.3119,1.895,63.74
+HistGradientBoosting (GBM),20.0,0.0476,0.018,0.8742,0.2427,2.604,73.78
+HistGradientBoosting (GBM),40.0,0.0244,0.009,0.9159,0.1826,3.625,81.34
+HistGradientBoosting (GBM),50.0,0.0196,0.009,0.9159,0.1826,3.625,83.39

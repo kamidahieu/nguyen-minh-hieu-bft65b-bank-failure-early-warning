@@ -1,0 +1,7 @@
+model,engine,pr_auc,roc_auc,brier_score,recall_top_1pct,recall_top_2pct,recall_top_5pct,dev_selected_threshold,test_precision_at_tau,test_recall_at_tau,test_specificity_at_tau,test_f1_at_tau,test_tp,test_fp,test_fn,test_tn,test_total_cost_m_usd,test_no_model_cost_m_usd,test_cost_reduction_pct,fit_and_eval_s
+HistGradientBoosting (GBM),scikit-learn Pipeline,0.6161,0.9834,0.00313,0.7735,0.8831,0.9376,0.018,0.2882,0.8469,0.9895,0.43,1847,4562,334,428703,269.785,1046.727,74.23,29.98
+Logistic Regression (L2 Calibrated),scikit-learn Pipeline,0.6137,0.982,0.00375,0.7712,0.8712,0.9422,0.046,0.6192,0.5465,0.9983,0.5806,1192,733,989,432532,492.243,1046.727,52.97,13.31
+"Random Forest (100 trees, depth=10)",scikit-learn Pipeline,0.6093,0.9783,0.00309,0.757,0.862,0.9248,0.044,0.2717,0.8313,0.9888,0.4096,1813,4859,368,428406,293.23,1046.727,71.99,56.18
+PySpark MLlib GBTClassifier,PySpark MLlib (Distributed Pipeline),0.5544,0.9796,0.00417,0.7322,0.8638,0.9188,0.0476,0.22,0.8592,0.9847,0.3502,1874,6646,307,426619,306.843,1046.727,70.69,26.89
+Logistic Regression (Class-Balanced),scikit-learn Pipeline,0.5445,0.9819,0.0102,0.7538,0.8707,0.9418,0.55,0.2787,0.8276,0.9892,0.417,1805,4672,376,428593,292.582,1046.727,72.05,31.42
+PySpark MLlib LogisticRegression,PySpark MLlib (Distributed Pipeline),0.5101,0.9758,0.00351,0.6873,0.8138,0.912,0.0476,0.3282,0.6997,0.9928,0.4468,1526,3124,655,430141,389.33,1046.727,62.81,12.74

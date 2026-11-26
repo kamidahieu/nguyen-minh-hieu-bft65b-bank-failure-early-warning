@@ -4,3 +4,4 @@ data_clean/
 __pycache__/
 .ipynb_checkpoints/
 .mplconfig/
+.venv/

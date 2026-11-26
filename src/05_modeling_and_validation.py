@@ -7,7 +7,7 @@ Part 5: Leak-Free Modeling, Purged Temporal Validation, Cost-Based Thresholding 
 2. Compares four models fitted strictly on Development data:
    - Baseline 1: Logistic Regression (L2, calibrated probabilities) in a leak-free sklearn Pipeline
    - Baseline 2: Class-Balanced Logistic Regression (illustrating calibration vs. ranking trade-off)
-   - Ensemble 1: Random Forest Classifier (200 trees, depth 12) in a leak-free sklearn Pipeline
+   - Ensemble 1: Random Forest Classifier (100 trees, depth 10) in a leak-free sklearn Pipeline
    - Ensemble 2: Histogram-Based Gradient Boosting (HistGradientBoostingClassifier)
    - Distributed Demo: PySpark MLlib Pipeline (Imputer -> VectorAssembler -> StandardScaler ->
      LogisticRegression & GBTClassifier)
@@ -459,7 +459,7 @@ def run_pyspark_mllib_demo(dev_df: pd.DataFrame, test_df: pd.DataFrame) -> list[
     )
     spark.sparkContext.setLogLevel("ERROR")
 
-    # Select top 18 domain CAMELS features covering all 6 pillars for the Spark MLlib pipeline demo
+    # Select top 21 domain CAMELS features covering all 6 pillars for the Spark MLlib pipeline demo
     mllib_features = [
         "texas_ratio", "tier1_rbc_ratio", "eq_to_asset", "tier1_lev_ratio",
         "eq_to_asset_chg_4q", "npa_to_asset", "npl_to_loans", "ore_to_asset",

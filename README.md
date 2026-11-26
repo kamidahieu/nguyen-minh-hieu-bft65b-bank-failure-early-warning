@@ -77,11 +77,9 @@ End-to-end, reproducible data-engineering and early-warning modeling pipeline bu
     ├── part5_feature_importance.csv      # Permutation feature importance (PR-AUC drop) on Development data
     ├── part5_model_evaluation.png        # High-DPI 4-panel Test PR curve, ROC curve, Dev cost curve, and feature importance
     ├── part6_executive_summary.md        # Evidence-based synthesis for Q1–Q3, limitations, and Vietnam (SBV) adaptation
-    ├── final_report_draft.md             # Full manuscript draft in Markdown prior to final DOCX typesetting
     └── BFT65B_Final_Report.docx          # Final formatted individual research report submission (DOCX)
 ```
 
----
 
 ## 3. Environment Setup & End-to-End Reproducibility
 

@@ -1,0 +1,23 @@
+table_name,metric,value,notes
+institutions.parquet,rows,27835,Total FDIC institution directory records
+institutions.parquet,columns,9,"ACTIVE, BKCLASS, CHANGEC1, STNAME, ENDEFYMD, CERT, ESTYMD, INSDATE, NAME"
+institutions.parquet,distinct_certs,27835,Unique FDIC CERT identifiers
+institutions.parquet,active_institutions,4208,ACTIVE == 1
+institutions.parquet,inactive_with_changec1,23607,Inactive institutions with exit code CHANGEC1
+failures.parquet,rows,4117,Total historical failure & assistance records (1934-2026)
+failures.parquet,columns,9,"QBFDEP, COST, QBFASSET, FAILDATE, CERT, CITYST, RESTYPE, FAILYR, NAME"
+failures.parquet,min_fail_date,1934-04-19,Earliest FAILDATE in failures.parquet
+failures.parquet,max_fail_date,2026-07-17,Latest FAILDATE in failures.parquet
+failures.parquet,restype_FAILURE_rows,3524,85.60% of total
+failures.parquet,restype_ASSISTANCE_rows,593,14.40% of total
+failures.parquet,restype_other_or_null_rows,0,"Check: FAILURE + ASSISTANCE + other == 4,117"
+failures.parquet,post_1984_events_total,3275,Non-null CERT with FAILDATE >= 1984-01-01
+failures.parquet,post_1984_restype_FAILURE,2863,Post-1984 outright failures
+failures.parquet,post_1984_restype_ASSISTANCE,412,Post-1984 open-bank assistance events
+failures.parquet,post_1984_unique_certs,3240,Distinct failing/assisted CERTs >= 1984-01-01
+failures.parquet,post_1984_multi_event_banks,35,Banks with >1 post-1984 event (max=2 events/bank)
+manifest_financials.json,quarters_verified,170,19840331 to 20260630
+manifest_financials.json,manifest_total_rows,1682738,Exact sum of rows across 170 verified quarters
+manifest_financials.json,download_created_local,2026-11-18 23:29:02 SE Asia Standard Time,File creation timestamp of manifest_financials.json
+manifest_financials.json,download_created_utc,2026-11-18 16:29:02 UTC,UTC creation timestamp of manifest_financials.json
+manifest_financials.json,file_last_modified_local,2026-11-26 08:24:56 SE Asia Standard Time,Filesystem mtime (OneDrive sync timestamp)

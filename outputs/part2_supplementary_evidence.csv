@@ -1,0 +1,26 @@
+category,metric,value,unit_or_detail,verification_formula
+failure_reconciliation,post_1984_failure_events_total,3275,events,failures.parquet: CERT not null & FAILDATE >= 1984-01-01
+failure_reconciliation,post_1984_unique_failing_certs,3240,distinct CERTs,Unique CERTs in post-1984 failures.parquet
+failure_reconciliation,post_1984_banks_with_multiple_events,35,distinct CERTs (max=2 events),CERTs with >1 post-1984 record in failures.parquet
+failure_reconciliation,post_1984_failing_certs_in_call_reports,3218,distinct CERTs (matches part2_exit_types.csv),Inner join of post-1984 failing CERTs with 1984Q1-2026Q2 financials
+failure_reconciliation,post_1984_failing_certs_without_call_reports,22,distinct CERTs (16 failed before 1984-03-31; 6 on/after 1984-03-31),"3,240 - 3,218 = 22 failing CERTs absent from raw Call Reports"
+conservatorship_exclusion,excluded_post_failure_rows,1095,bank-quarter rows,Raw financials rows with rep_dt >= fail_dt for RESTYPE == 'FAILURE'
+conservatorship_exclusion,excluded_post_failure_distinct_certs,268,distinct CERTs,Distinct banks with post-failure Call Report filings
+conservatorship_exclusion,excluded_post_failure_year_range,1985-1992,calendar years,"min_year=1985, max_year=1992"
+dev_insolvency_eq_lt_0,dev_failing_rows_total,10251,bank-quarters,panel_labeled.parquet: split=='dev' & y_fail_4q==1
+dev_insolvency_eq_lt_0,dev_failing_rows_eq_lt_0_flag,4274,41.69% of all failing dev rows (4274 raw EQ<0; 41.69% of non-null EQ),flag_negative_equity == 1 among dev y_fail_4q == 1
+dev_insolvency_eq_lt_0,dev_non_failing_rows_total,1183663,bank-quarters,panel_labeled.parquet: split=='dev' & y_fail_4q==0
+dev_insolvency_eq_lt_0,dev_non_failing_rows_eq_lt_0_flag,9920,0.84% of all non-failing dev rows (9920 raw EQ<0; 0.84% of non-null EQ),flag_negative_equity == 1 among dev y_fail_4q == 0
+reporting_gaps,total_reporting_gaps,33,gaps (q_step > 1),Raw financials 1984Q1-2026Q2 consecutive q_idx step > 1
+reporting_gaps,distinct_banks_with_gaps,32,distinct CERTs,Unique CERTs experiencing >=1 gap
+reporting_gaps,single_quarter_gaps_dq2,25,gaps (q_step == 2),1 missing quarter between consecutive filings
+reporting_gaps,multi_quarter_gaps_dq_gt2,8,gaps (q_step > 2),>=2 consecutive missing quarters
+reporting_gaps,max_reporting_gap_dq,31,quarters,max(q_idx[t] - q_idx[t-1]) within CERT
+rbcrwaj_structural_zeros,rbcrwaj_raw_zero_2019_pct,0.32%,"68 / 21,366 rows (all 68 have null EQ)",Year 2019: RBCRWAJ == 0 over all rows
+rbcrwaj_structural_zeros,rbcrwaj_struct_zero_2019_pct,0.00%,"0 / 21,366 rows (0.00% over non-null EQ)",Year 2019: RBCRWAJ == 0 & EQ is not null & EQ != 0
+rbcrwaj_structural_zeros,rbcrwaj_raw_zero_2026_pct,41.50%,"3,596 / 8,666 rows (2026Q1-2026Q2)",Year 2026: RBCRWAJ == 0 over all rows
+rbcrwaj_structural_zeros,rbcrwaj_struct_zero_2026_pct,41.10%,"3,562 / 8,666 rows (41.27% over non-null EQ)",Year 2026: RBCRWAJ == 0 & EQ is not null & EQ != 0 (CBLR opt-in)
+rbcrwaj_structural_zeros,rbcrwaj_struct_zero_1980s_pct,100.00%,"418,752 / 419,535 all rows (99.81% all rows; 100.00% raw zero)",1984-1989 pre-Basel I (matches part2_dq_by_decade.csv non-null EQ mean)
+rbcrwaj_structural_zeros,rbcrwaj_struct_zero_2020s_pct,36.92%,"45,423 / 123,461 all rows (36.79% all rows; 37.15% raw zero)",2020-2026Q2 post-CBLR (matches part2_dq_by_decade.csv non-null EQ mean)
+scaling_curve_sampling,scale_025x_rows,522516,"31.40% of 1,664,114 panel rows (6,013 / 24,055 lowest-CERT banks)",Sorted first 25% of unique CERTs (older low-CERT banks have longer tenures)
+scaling_curve_sampling,scale_050x_rows,1001948,"60.21% of 1,664,114 panel rows (12,027 / 24,055 lowest-CERT banks)",Sorted first 50% of unique CERTs
